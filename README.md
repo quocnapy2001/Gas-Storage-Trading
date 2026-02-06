@@ -1,6 +1,6 @@
 # Gas Trading
 
-## Guide to run file:
+## Guide to run:
     Data => Interpolation => Extralopation
 
 ## Data:
