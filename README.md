@@ -9,7 +9,7 @@
 ## Price Modelling
 ### Idea:
 - Simple Linear Regression for annual cyclicality using months
-- Bilinear Regression for cyclicality by combining a trigonometric and linear model
+- Bilinear Regression for cyclicality by combining a trigonometric and linear model.
 
 
 ### Steps:
@@ -26,14 +26,27 @@
 ## Contract Valuation:
 ### Context: 
 - Any trade agreement is as valuable as:
-        The price we can sell - The price we are able to buy - cost
+    The price we can sell - The price we are able to buy - cost
+- Profit <= Sell > Price + Cost
 - Example: Purchase in summer at MMBtu $2/MMBtu and store for 4 months, and ensure to sell at $3/MMBtu, with $0.1 Storage cost per month, $0.01 injection/withdrawal cost per 1MMBtu and $0.05 transportation cost to and from facility =>
-        Value of contract = (3-2) - 0.1*4 - 0.01 - 0.05*2 = 0.490 ($)
-- 
+    Value of contract = (3-2) - 0.1*4 - 0.01 - 0.05*2 = 0.490 ($)
+- Storage Trade Process:
+    + Buy (Injection Date) => Outflow = Injected * Buy Price
+    + Store.
+    + Sell (Withdrawal Date) => Inflow = Withdraw *Sell Price    
   
-### Idea:
-- 
+### Needed Inputs:
+- Injection Date.
+- Withdrawal Date.
+- Prices on those dates
+- Injection/withdrawl rate.
+- Storage Capacity.
+- Cost.
 
 ### Steps:
-1. 
+1. Start with storage = 0
+2. Injection => Buy => increase storage, add storage cost.
+3. Withdrawal => Sell => decrease storage, add revenue.
+4. Deduct Cost.
+5. Return Contract Value.
 
