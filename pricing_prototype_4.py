@@ -118,13 +118,13 @@ def price_storage_contract(
     return contract_val, pd.DataFrame(event_log)
     
 val, event_df = price_storage_contract(
-                inj_dates=["2024-10-31"],
+                inj_dates=["2024-10-31","2024-12-31"],
                 wdr_dates=["2025-02-28"],
                 inj_vol=1_000_000,
-                wdr_vol=1_000_000,
-                inj_rate=1_000_000,
-                wdr_rate=1_000_000,
-                max_vol=1_000_000,
+                wdr_vol=2_000_000,
+                inj_rate=2_000_000,
+                wdr_rate=2_000_000,
+                max_vol=2_000_000,
                 storage_cost=100_000,           
                 inj_cost = 0.01,           
                 wdr_cost = 0.01,        
