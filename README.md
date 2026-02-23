@@ -6,7 +6,7 @@
     + for delivery at the end of that month.
     + from 31/10/2020 to 30/09/2024
 
-## Price Modelling
+## Analyze Price Data
 ### Idea:
 - Simple Linear Regression for annual cyclicality using months
 - Bilinear Regression for cyclicality by combining a trigonometric and linear model.
@@ -44,9 +44,5 @@
 - Cost.
 
 ### Steps:
-1. Start with storage = 0
-2. Injection => Buy => increase storage, add storage cost.
-3. Withdrawal => Sell => decrease storage, add revenue.
-4. Deduct Cost.
-5. Return Contract Value.
-
+1. Build an automated pricing function.
+2. 
