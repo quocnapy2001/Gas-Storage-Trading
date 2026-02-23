@@ -13,15 +13,15 @@
 
 
 ### Steps:
- 1. Estmiate the purchase price for any data in the past => Interpolate.
+ 1. Estmiate the purchase price for any data in the past (Interpolate).
  2. Extrapolate prices for one more year beyong the last available month-end point
- 3. Provide a function: input a date => output an estimated price
- 4. Visualise patterns and comment
-
-### Improvement ideas:
-- Fit a seasonal ARIMA (SAMIRA) model.
-- Hol-Winters expoential smoothing
-- External Regressors
+ 3. Provide a function to input a date => output an estimated price
+    
+### Output:
+<img width="392" height="278" alt="image" src="https://github.com/user-attachments/assets/ae59a239-492b-4e97-a17a-7cfad08cf5bc" />
+<img width="382" height="278" alt="image" src="https://github.com/user-attachments/assets/6d4e6ccd-2fd7-4b50-b859-87decaaf3311" />
+<img width="615" height="333" alt="image" src="https://github.com/user-attachments/assets/86ceeebd-7302-4d25-a12e-2a5d4020e633" />
+<img width="727" height="387" alt="image" src="https://github.com/user-attachments/assets/8f41a141-936a-4b0c-91a3-f6c722b0cd17" />
 
 ## Contract Valuation:
 ### Context: 
@@ -33,7 +33,7 @@
 - Storage Trade Process:
     + Buy (Injection Date) => Outflow = Injected * Buy Price
     + Store.
-    + Sell (Withdrawal Date) => Inflow = Withdraw *Sell Price    
+    + Sell (Withdrawal Date) => Inflow = Withdraw * Sell Price    
   
 ### Needed Inputs:
 - Injection Date.
@@ -44,5 +44,9 @@
 - Cost.
 
 ### Steps:
-1. Build an automated pricing function.
-2. 
+
+
+### Output (Example):
+<img width="551" height="269" alt="image" src="https://github.com/user-attachments/assets/04fda629-9a1c-43ac-b3f1-3ca544b2d9e1" />
+<img width="1016" height="144" alt="image" src="https://github.com/user-attachments/assets/27d0f3e5-79c9-43f3-b7ff-fa83821ffc28" />
+
