@@ -7,8 +7,8 @@ Created on Tue Feb  3 12:58:03 2026
 
 # Due to the data chacteristics => should include seasonality
 
-from Data import natgas_df, pd, plt, np
-from Interpolation import interpolate_price
+from data_0 import natgas_df, pd, plt, np
+from interpolation_1 import interpolate_price
 from sklearn.linear_model import Ridge
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -104,7 +104,7 @@ plt.grid(True)
 plt.show()
 
 ### Test
-print("/")
-print("Past date:", estimate_gas_price("2022-06-15"))
-print("Last observed:", estimate_gas_price("2024-09-30"))
-print("Future date:", estimate_gas_price("2025-03-15"))
+print("\n--- Price Estimates ---")
+print("Past date (31/12/2022):", estimate_gas_price("2022-12-31"))
+print("Last observed (30/09/2024):", estimate_gas_price("2024-09-30"))
+print("Future date (30/04/2025):", estimate_gas_price("2025-04-30"))

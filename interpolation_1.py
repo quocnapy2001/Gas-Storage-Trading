@@ -13,7 +13,7 @@ Created on Tue Feb  3 08:06:16 2026
 # best neutral guess for any date between 2 observed
 # month-end prices is a straight line.
 
-from Data import natgas_df, pd, plt, np
+from data_0 import natgas_df, pd, plt, np
 
 
 date_int = natgas_df["Dates"].values.astype("datetime64[D]").astype(int)
@@ -26,4 +26,5 @@ def interpolate_price(query_date):
 
 # Test
 print("/")
-print("Interpolation check:",interpolate_price("2021-01-15"))
+print("Interpolation check (31/12/2022):",interpolate_price("2022-12-31"))
+

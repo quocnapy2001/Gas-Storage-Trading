@@ -15,6 +15,10 @@ import numpy as np
 natgas_df = pd.read_csv("Nat_Gas.csv")
 natgas_df["Dates"] = pd.to_datetime(natgas_df["Dates"])
 
+prices = natgas_df["Prices"].values
+dates = natgas_df["Dates"]
+
+
 print(natgas_df)
 
 
