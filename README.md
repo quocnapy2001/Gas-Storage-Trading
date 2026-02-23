@@ -6,22 +6,31 @@
     + for delivery at the end of that month.
     + from 31/10/2020 to 30/09/2024
 
-## Price Modelling
-### Idea:
-- Simple Linear Regression for annual cyclicality using months
-- Bilinear Regression for cyclicality by combining a trigonometric and linear model.
-
-
-### Steps:
- 1. Estmiate the purchase price for any data in the past => Interpolate.
+## Analyze Price Data
+### Objective:
+ 1. Estmiate the purchase price for any data in the past (Interpolate).
  2. Extrapolate prices for one more year beyong the last available month-end point
- 3. Provide a function: input a date => output an estimated price
- 4. Visualise patterns and comment
+ 3. Provide a function to input a date => output an estimated price
 
-### Improvement ideas:
-- Fit a seasonal ARIMA (SAMIRA) model.
-- Hol-Winters expoential smoothing
-- External Regressors
+### Steps: 
+1. Interpolation:
+    - Use observed month-end prices as anchor data points.
+    - Assume prices evolve smoothly between consecutive month-end observations.
+    - Apply linear interpolation to estimate prices for any date within the historical range.
+    - Build a function that accepts a historical date and returns the interpolated price.
+3. Extrapolation:
+    - Analyse historical data to identify trend and seasonal patterns.
+    - Model the underlying price trend using time-based regression.
+    - Capture annual seasonality using trigonometric (sine and cosine) components.
+    - Fit the model to historical monthly prices.
+    - Use the fitted model to forecast prices up to one year beyond the last observed date.
+    - Integrate interpolation and extrapolation into a single pricing function.
+
+### Output:
+<img width="392" height="278" alt="image" src="https://github.com/user-attachments/assets/ae59a239-492b-4e97-a17a-7cfad08cf5bc" />
+<img width="382" height="278" alt="image" src="https://github.com/user-attachments/assets/6d4e6ccd-2fd7-4b50-b859-87decaaf3311" />
+<img width="615" height="333" alt="image" src="https://github.com/user-attachments/assets/86ceeebd-7302-4d25-a12e-2a5d4020e633" />
+<img width="727" height="387" alt="image" src="https://github.com/user-attachments/assets/8f41a141-936a-4b0c-91a3-f6c722b0cd17" />
 
 ## Contract Valuation:
 ### Context: 
@@ -33,20 +42,29 @@
 - Storage Trade Process:
     + Buy (Injection Date) => Outflow = Injected * Buy Price
     + Store.
-    + Sell (Withdrawal Date) => Inflow = Withdraw *Sell Price    
+    + Sell (Withdrawal Date) => Inflow = Withdraw * Sell Price    
   
 ### Needed Inputs:
-- Injection Date.
-- Withdrawal Date.
-- Prices on those dates
-- Injection/withdrawl rate.
-- Storage Capacity.
-- Cost.
+- Injection dates
+- Withdrawal dates
+- Volumes injected/withdrawn
+- Injection and withdrawal rate limits
+- Maximum storage capacity
+- Storage cost (per month)
+- Injection/withdrawal fees
+- Transportation cost
 
 ### Steps:
-1. Start with storage = 0
-2. Injection => Buy => increase storage, add storage cost.
-3. Withdrawal => Sell => decrease storage, add revenue.
-4. Deduct Cost.
-5. Return Contract Value.
+1. Identify all injection and withdrawal dates and volumes.
+2. Arrange all contract events in chronological order.
+3. Track inventory levels dynamically over time.
+4. Apply storage costs for the duration gas remains stored.
+5. Calculate injection cash outflows (purchase price + fees + transport).
+6. Calculate withdrawal cash inflows (sale price − fees − transport).
+7. Enforce operational constraints (rate limits and capacity).
+8. Aggregate all cash flows to determine total contract value.
+
+### Output (Example):
+<img width="551" height="269" alt="image" src="https://github.com/user-attachments/assets/04fda629-9a1c-43ac-b3f1-3ca544b2d9e1" />
+<img width="1016" height="144" alt="image" src="https://github.com/user-attachments/assets/27d0f3e5-79c9-43f3-b7ff-fa83821ffc28" />
 
