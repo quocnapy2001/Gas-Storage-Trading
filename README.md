@@ -1,5 +1,7 @@
 # Gas Trading
 
+## Motivation: I have never worked with gas trading before and have little to no exposure to this kind of trading.
+
 ## Data:
 - Monthly natural gas prices. Each data point is:
     + the market purchase price of natural gas.
