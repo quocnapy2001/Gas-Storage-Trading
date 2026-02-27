@@ -1,6 +1,6 @@
 # Gas Trading
 
-## Motivation: I have never worked with gas trading before and have little to no exposure to this kind of trading.
+## Motivation: I have never worked with gas trading before and have little to no exposure to this kind of trading. So this project is an excuse for me to check it out.
 
 ## Data:
 - Monthly natural gas prices. Each data point is:
