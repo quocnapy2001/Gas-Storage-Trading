@@ -8,7 +8,8 @@
     + for delivery at the end of that month.
     + from 31/10/2020 to 30/09/2024
 
-## Analyze Price Data
+## Analyze Price Data: 
+Although the provided data can be collected daily but I want to assume that this is a case where I can only have access to monthly data and the output required to be daily then in such that what can I do?
 ### Objective:
  1. Estmiate the purchase price for any data in the past (Interpolate).
  2. Extrapolate prices for one more year beyong the last available month-end point
