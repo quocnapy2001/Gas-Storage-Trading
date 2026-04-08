@@ -42,8 +42,8 @@ Even though gas prices can often be observed daily, I assume that I only have ac
 - Any trade agreement is as valuable as:
     The price we can sell - The price we are able to buy - cost
 - Profit <= Sell > Price + Cost
-- Example: Purchase in summer at MMBtu $2/MMBtu and store for 4 months, and ensure to sell at $3/MMBtu, with $0.1 Storage cost per month, $0.01 injection/withdrawal cost per 1MMBtu and $0.05 transportation cost to and from facility =>
-    Value of contract = (3-2) - 0.1* 4 - 0.01 - 0.05* 2 = 0.490 ($)
+- Example: Purchase in summer at MMBtu $2/MMBtu and store for 4 months, and ensure to sell at $3/MMBtu, with $0.1 Storage cost per month, $0.01 injection/withdrawal cost per 1MMBtu and $0.05 transportation cost to and from facility.
+=> Value of contract = (3-2) - 0.1* 4 - 0.01 - 0.05* 2 = 0.490 ($)
 - Storage Trade Process:
     + Buy (Injection Date) => Outflow = Injected * Buy Price
     + Store.
